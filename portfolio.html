@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - John Doe</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Portfolio</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="admin/login.html" class="nav-link admin-link">Admin</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <p>A showcase of my recent work and projects</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="portfolio-filter">
+        <div class="container">
+            <div class="filter-buttons" id="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid-section">
+        <div class="container">
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Project details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 id="footer-name">John Doe</h3>
+                    <p id="footer-description">Full Stack Developer passionate about creating amazing web experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="#" id="footer-github"><i class="fab fa-github"></i></a>
+                        <a href="#" id="footer-linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" id="footer-twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 <span id="footer-copyright-name">John Doe</span>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html>

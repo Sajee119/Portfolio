@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Management - Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <div class="admin-container">
+        <!-- Sidebar (same as dashboard) -->
+        <aside class="admin-sidebar" id="admin-sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-cog"></i> Admin Panel</h2>
+                <button class="sidebar-toggle" id="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="profile.html" class="nav-item active">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="projects.html" class="nav-item">
+                    <i class="fas fa-folder"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="skills.html" class="nav-item">
+                    <i class="fas fa-code"></i>
+                    <span>Skills</span>
+                </a>
+                <a href="experience.html" class="nav-item">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Experience</span>
+                </a>
+                <a href="messages.html" class="nav-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                    <span class="badge" id="message-count">0</span>
+                </a>
+                <a href="settings.html" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="../index.html" class="nav-item">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>View Website</span>
+                </a>
+                <button class="nav-item logout-btn" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <div class="header-left">
+                    <button class="sidebar-toggle mobile-only" id="mobile-sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1>Profile Management</h1>
+                </div>
+                <div class="header-right">
+                    <button class="btn btn-success" id="save-profile">
+                        <i class="fas fa-save"></i>
+                        Save Changes
+                    </button>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <div class="profile-form-container">
+                    <form class="profile-form" id="profile-form">
+                        <!-- Basic Information -->
+                        <div class="form-section">
+                            <h2><i class="fas fa-user"></i> Basic Information</h2>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="full-name">Full Name *</label>
+                                    <input type="text" id="full-name" name="fullName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="title">Professional Title *</label>
+                                    <input type="text" id="title" name="title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="location">Location</label>
+                                    <input type="text" id="location" name="location">
+                                </div>
+                                <div class="form-group">
+                                    <label for="website">Website</label>
+                                    <input type="url" id="website" name="website">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bio Section -->
+                        <div class="form-section">
+                            <h2><i class="fas fa-align-left"></i> About & Bio</h2>
+                            <div class="form-group">
+                                <label for="bio-short">Short Bio (Hero Section)</label>
+                                <textarea id="bio-short" name="bioShort" rows="3" placeholder="Brief description for the hero section"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="bio-long">Detailed Bio (About Page)</label>
+                                <textarea id="bio-long" name="bioLong" rows="6" placeholder="Detailed description for the about page"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="form-section">
+                            <h2><i class="fas fa-share-alt"></i> Social Links</h2>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="github">GitHub</label>
+                                    <input type="url" id="github" name="github" placeholder="https://github.com/username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="linkedin">LinkedIn</label>
+                                    <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="twitter">Twitter</label>
+                                    <input type="url" id="twitter" name="twitter" placeholder="https://twitter.com/username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="instagram">Instagram</label>
+                                    <input type="url" id="instagram" name="instagram" placeholder="https://instagram.com/username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dribbble">Dribbble</label>
+                                    <input type="url" id="dribbble" name="dribbble" placeholder="https://dribbble.com/username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="behance">Behance</label>
+                                    <input type="url" id="behance" name="behance" placeholder="https://behance.net/username">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Image Upload -->
+                        <div class="form-section">
+                            <h2><i class="fas fa-image"></i> Profile Images</h2>
+                            <div class="image-upload-grid">
+                                <div class="image-upload-item">
+                                    <label>Profile Photo</label>
+                                    <div class="image-upload">
+                                        <div class="image-preview" id="profile-image-preview">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <input type="file" id="profile-image" accept="image/*">
+                                        <button type="button" class="btn btn-secondary" onclick="document.getElementById('profile-image').click()">
+                                            <i class="fas fa-upload"></i>
+                                            Upload Photo
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="image-upload-item">
+                                    <label>Hero Image</label>
+                                    <div class="image-upload">
+                                        <div class="image-preview" id="hero-image-preview">
+                                            <i class="fas fa-image"></i>
+                                        </div>
+                                        <input type="file" id="hero-image" accept="image/*">
+                                        <button type="button" class="btn btn-secondary" onclick="document.getElementById('hero-image').click()">
+                                            <i class="fas fa-upload"></i>
+                                            Upload Image
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CV Upload -->
+                        <div class="form-section">
+                            <h2><i class="fas fa-file-pdf"></i> Resume/CV</h2>
+                            <div class="cv-upload">
+                                <input type="file" id="cv-file" accept=".pdf,.doc,.docx">
+                                <button type="button" class="btn btn-secondary" onclick="document.getElementById('cv-file').click()">
+                                    <i class="fas fa-upload"></i>
+                                    Upload CV/Resume
+                                </button>
+                                <p id="cv-filename" class="file-name"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="success-message" id="success-message">
+        <i class="fas fa-check-circle"></i>
+        <span>Profile updated successfully!</span>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/profile-admin.js"></script>
+</body>
+</html>
