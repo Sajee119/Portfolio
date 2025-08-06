@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - John Doe Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Portfolio</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="admin/login.html" class="nav-link admin-link">Admin</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>Get to know more about my journey and passion</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-placeholder" id="about-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 id="about-title">Full Stack Developer & Designer</h2>
+                    <p id="about-description">
+                        I'm a passionate full-stack developer with over 5 years of experience creating 
+                        beautiful and functional web applications. I love combining creative design with 
+                        robust functionality to deliver exceptional user experiences.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <strong>Name:</strong> <span id="about-name">John Doe</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Location:</strong> <span id="about-location">New York, USA</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Email:</strong> <span id="about-email">john@example.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Phone:</strong> <span id="about-phone">+1 (555) 123-4567</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary" id="download-cv">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline" id="experience-timeline">
+                <!-- Experience items will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline" id="education-timeline">
+                <!-- Education items will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-categories" id="skills-categories">
+                <!-- Skills will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 id="footer-name">John Doe</h3>
+                    <p id="footer-description">Full Stack Developer passionate about creating amazing web experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="#" id="footer-github"><i class="fab fa-github"></i></a>
+                        <a href="#" id="footer-linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" id="footer-twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 <span id="footer-copyright-name">John Doe</span>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>
